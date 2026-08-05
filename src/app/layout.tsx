@@ -129,7 +129,7 @@ export default function RootLayout({
           }}
         />
         <Header />
-        <main className="min-h-screen pt-[calc(30px+12vw)] min-[800px]:pt-[calc(64px+2vw)]">
+        <main className="min-h-screen pt-20 min-[800px]:pt-[calc(60px+2vw)]">
           {children}
         </main>
         <Footer />

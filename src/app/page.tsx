@@ -46,7 +46,7 @@ export default function HomePage() {
           <>
             Geleceği
             <br />
-            <span className="whitespace-nowrap">Hızlandırıyoruz</span>
+            Hızlandırıyoruz
           </>
         }
         description="Engelleri kaldıran, yeteneği besleyen ve STEM, motorsport ile ötesinde geleceğin kariyerlerine ilham veren küresel bir eğitim girişimiyiz."
@@ -55,13 +55,13 @@ export default function HomePage() {
         imageAlt="STEM Racing World Finals"
         animate={false}
         showCornerLogo
-        imageClassName="object-cover object-right"
-        overlayClassName="absolute inset-0 bg-gradient-to-r from-brand-black from-0% via-brand-black/90 via-40% to-transparent to-62%"
+        imageClassName="object-cover object-[72%_center] sm:object-right"
+        overlayClassName="absolute inset-0 bg-gradient-to-r from-brand-black from-0% via-brand-black/90 via-45% to-transparent to-75% md:via-40% md:to-62%"
         containerClassName="px-5 sm:px-8 md:px-10 lg:px-12"
         contentClassName="max-w-[min(100%,34rem)] md:max-w-[38rem] lg:max-w-[42rem]"
-        titleClassName="text-[clamp(2.5rem,0.9rem+5vw,5.75rem)] leading-[0.95] [overflow-wrap:normal] [word-break:keep-all]"
+        titleClassName="text-[clamp(2.25rem,1rem+6vw,5.75rem)] leading-[0.98]"
         descriptionClassName="max-w-[32rem] leading-relaxed"
-        className="aspect-[2560/1045] min-h-[280px] w-full max-h-[min(85vh,900px)] pt-24 pb-10 md:pt-28 md:pb-16 lg:pb-20"
+        className="min-h-[min(72svh,560px)] w-full sm:min-h-[min(70svh,640px)] md:aspect-[2560/1045] md:min-h-[360px] md:max-h-[min(85vh,900px)] pb-10 pt-8 sm:pb-12 md:pb-16 md:pt-10 lg:pb-20"
       />
 
       <Section theme="light-bold" className="py-16 md:py-24">
@@ -78,7 +78,7 @@ export default function HomePage() {
 
             <p className="eyebrow mt-10 mb-6">Partnerlerimiz</p>
 
-            <div className="mx-auto grid max-w-4xl grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 sm:gap-x-12 sm:gap-y-10">
+            <div className="mx-auto grid max-w-4xl grid-cols-2 items-center gap-x-4 gap-y-6 sm:grid-cols-3 sm:gap-x-12 sm:gap-y-10">
               {(
                 [
                   {

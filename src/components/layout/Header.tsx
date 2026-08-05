@@ -9,7 +9,7 @@ import { mainNav, type NavItem } from "@/lib/nav";
 import { cn } from "@/lib/cn";
 
 function Logo() {
-  return <BrandLogo priority heightClassName="h-12 md:h-[60px]" />;
+  return <BrandLogo priority heightClassName="h-10 sm:h-12 min-[800px]:h-[60px]" />;
 }
 
 function DesktopFolder({ item }: { item: Extract<NavItem, { type: "folder" }> }) {
@@ -56,7 +56,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-brand-black text-white border-b border-white/10 overflow-x-clip">
-      <div className="container-site flex items-center justify-between py-[6vw] min-[800px]:py-[1vw] gap-3 min-[800px]:gap-4">
+      <div className="container-site flex items-center justify-between py-3.5 min-[800px]:py-[1vw] gap-3 min-[800px]:gap-4">
         <Logo />
 
         <nav
@@ -77,8 +77,8 @@ export function Header() {
             ),
           )}
           <div className="ml-3">
-            <Button href="/contact" className="!py-3 !px-5 !text-sm">
-              İletişime geçin
+            <Button href="/contact" className="!py-3 !px-5 !text-sm normal-case">
+              İLETİŞİME GEÇİN
             </Button>
           </div>
         </nav>
@@ -117,7 +117,7 @@ export function Header() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="min-[800px]:hidden fixed inset-0 top-[calc(30px+12vw)] bg-brand-black z-40 overflow-y-auto"
+            className="min-[800px]:hidden fixed inset-0 top-20 bg-brand-black z-40 overflow-y-auto"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -131,7 +131,7 @@ export function Header() {
                       {item.type === "folder" ? (
                         <button
                           type="button"
-                          className="w-full text-left py-3 text-xl font-[family-name:var(--font-heading)] italic capitalize"
+                          className="w-full text-left py-3 text-xl font-[family-name:var(--font-heading)] italic"
                           onClick={() => setFolder(item)}
                         >
                           {item.label}
@@ -139,7 +139,7 @@ export function Header() {
                       ) : (
                         <Link
                           href={item.href}
-                          className="block py-3 text-xl font-[family-name:var(--font-heading)] italic capitalize"
+                          className="block py-3 text-xl font-[family-name:var(--font-heading)] italic"
                           onClick={() => setOpen(false)}
                         >
                           {item.label}
@@ -148,7 +148,9 @@ export function Header() {
                     </li>
                   ))}
                   <li className="pt-6">
-                    <Button href="/contact">İletişime geçin</Button>
+                    <Button href="/contact" className="normal-case">
+                      İLETİŞİME GEÇİN
+                    </Button>
                   </li>
                 </ul>
               ) : (

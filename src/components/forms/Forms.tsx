@@ -83,7 +83,7 @@ function FormShell({
         role="status"
         className="rounded-[5.6px] border border-current/20 bg-white/5 p-6"
       >
-        <p className="text-lg font-[family-name:var(--font-heading)] italic capitalize mb-2">
+        <p className="text-lg font-[family-name:var(--font-heading)] italic mb-2">
           Teşekkürler
         </p>
         <p className="opacity-90">{successMessage}</p>

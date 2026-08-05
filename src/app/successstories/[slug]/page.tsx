@@ -44,7 +44,9 @@ export default async function SuccessStoryPage({ params }: Props) {
             <p className="font-meta text-sm mb-4 opacity-80">
               {post.category} · {formatDate(post.date)}
             </p>
-            <h1 className="text-4xl md:text-6xl mb-8">{post.title}</h1>
+            <h1 className="mb-8 text-[clamp(1.75rem,1rem+3.5vw,3.75rem)] leading-tight">
+              {post.title}
+            </h1>
           </FadeIn>
         </Container>
       </Section>

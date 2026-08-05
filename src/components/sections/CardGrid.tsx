@@ -62,7 +62,7 @@ export function CardGrid({
                   />
                 </div>
               ) : null}
-              <h3 className="text-2xl md:text-[2rem] mb-3">{item.title}</h3>
+              <h3 className="mb-3 text-[clamp(1.25rem,1rem+1.5vw,2rem)]">{item.title}</h3>
               <p className="opacity-90 mb-6 flex-1">{item.description}</p>
               <div>
                 <Button

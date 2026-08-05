@@ -12,7 +12,7 @@ export function JoinTheRace({
   title = (
     <>
       Öğrencilerinizin STEM potansiyelini{" "}
-      <span className="whitespace-nowrap">ateşlemeye hazır mısınız?</span>
+      <span className="sm:whitespace-nowrap">ateşlemeye hazır mısınız?</span>
     </>
   ),
   ctaLabel = "HEMEN BAŞLAYIN",
@@ -23,7 +23,7 @@ export function JoinTheRace({
       <Container>
         <FadeIn className="max-w-4xl">
           <p className="eyebrow mb-4">YARIŞA KATILIN</p>
-          <h2 className="mb-8">{title}</h2>
+          <h2 className="mb-8 text-balance">{title}</h2>
           <Button href={ctaHref} variant="secondary">
             {ctaLabel}
           </Button>

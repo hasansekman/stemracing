@@ -26,7 +26,7 @@ export function AccordionFaq({
     <Section theme={theme} className="py-16 md:py-24">
       <Container>
         <FadeIn className="mb-10">
-          <h3 className="text-3xl md:text-[3rem]">{title}</h3>
+          <h3>{title}</h3>
         </FadeIn>
 
         <div className="max-w-3xl divide-y divide-current/20">

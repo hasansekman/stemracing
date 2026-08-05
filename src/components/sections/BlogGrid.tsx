@@ -39,7 +39,7 @@ export function BlogGrid({
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 md:group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       quality={75}
                     />
@@ -47,7 +47,7 @@ export function BlogGrid({
                   <p className="font-meta text-sm mb-2 opacity-70">
                     {post.category} · {formatDate(post.date)}
                   </p>
-                  <h3 className="text-2xl md:text-[2rem] mb-3 group-hover:text-brand-accent transition-colors">
+                  <h3 className="mb-3 text-[clamp(1.25rem,1rem+1.5vw,2rem)] group-hover:text-brand-accent transition-colors">
                     {post.title}
                   </h3>
                   <p className="opacity-90 text-base">{post.excerpt}</p>

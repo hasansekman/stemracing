@@ -5,7 +5,7 @@ export default function NotFound() {
     <div className="min-h-[70vh] flex items-center justify-center bg-brand-black text-white px-6">
       <div className="max-w-xl text-center">
         <p className="eyebrow mb-4 text-brand-accent">404</p>
-        <h1 className="text-5xl md:text-6xl mb-6">Yarış çizgisinden çıktık</h1>
+        <h1 className="mb-6 text-balance">Yarış çizgisinden çıktık</h1>
         <p className="opacity-90 mb-8">
           Aradığınız sayfa bulunamadı veya taşınmış olabilir. Menüyü kontrol
           edin ya da STEM Racing yolculuğunuza devam etmek için ana sayfaya

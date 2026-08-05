@@ -20,7 +20,7 @@ type HeroProps = {
   titleClassName?: string;
   descriptionClassName?: string;
   align?: "left" | "center";
-  /** Sağ üstte marka logosu göster */
+  /** Sağ tarafta marka logosu göster (md ve üzeri) */
   showCornerLogo?: boolean;
   /** Hero LCP için animasyonu kapat (varsayılan: true) */
   animate?: boolean;
@@ -49,11 +49,11 @@ export function Hero({
   const content = (
     <>
       {eyebrow ? <p className="eyebrow mb-4 opacity-90">{eyebrow}</p> : null}
-      <h1 className={cn("mb-6 md:mb-8", titleClassName)}>{title}</h1>
+      <h1 className={cn("mb-5 sm:mb-6 md:mb-8", titleClassName)}>{title}</h1>
       {description ? (
         <p
           className={cn(
-            "mb-8 text-base opacity-90 md:mb-10 md:text-lg lg:text-xl",
+            "mb-7 text-base opacity-90 sm:mb-8 md:mb-10 md:text-lg lg:text-xl",
             descriptionClassName ?? "max-w-2xl",
           )}
         >
@@ -74,8 +74,8 @@ export function Hero({
       theme={theme}
       className={cn(
         "relative flex items-end overflow-hidden",
-        !className?.includes("pt-") && "pt-28",
-        !className?.includes("pb-") && "pb-16 md:pb-24",
+        !className?.includes("pb-") && "pb-14 md:pb-24",
+        !className?.includes("pt-") && "pt-10 md:pt-14",
         className,
       )}
     >
@@ -102,10 +102,10 @@ export function Hero({
       ) : null}
 
       {showCornerLogo ? (
-        <div className="pointer-events-none absolute right-4 top-1/2 z-20 -translate-y-1/2 sm:right-6 md:right-8 lg:right-10">
+        <div className="pointer-events-none absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 md:block md:right-8 lg:right-10">
           <BrandLogo
             linked={false}
-            heightClassName="h-14 w-auto opacity-95 drop-shadow-lg sm:h-16 md:h-20 lg:h-24"
+            heightClassName="h-16 w-auto opacity-95 drop-shadow-lg lg:h-24"
           />
         </div>
       ) : null}

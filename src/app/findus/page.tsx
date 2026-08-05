@@ -36,7 +36,7 @@ export default function FindUsPage() {
               </Button>
             </FadeIn>
             <FadeIn delay={0.05} className="w-full">
-              <div className="media-frame aspect-[4/3] w-full border border-white/20 bg-brand-black/20">
+              <div className="media-frame aspect-[4/3] min-h-[220px] w-full max-w-full border border-white/20 bg-brand-black/20">
                 <iframe
                   title="STEM Racing küresel haritası"
                   src="https://www.google.com/maps/d/embed?mid=1-kumMlb6YyVtJB980UPdvjFB5-kVGv9R&hl=tr&ehbc=2E312F"

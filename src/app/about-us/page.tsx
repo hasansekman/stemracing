@@ -81,19 +81,19 @@ export default function AboutUsPage() {
       <Section theme="black-bold" className="py-16 md:py-24">
         <Container>
           <FadeIn className="mb-10 max-w-3xl">
-            <h1 className="text-5xl md:text-6xl mb-4">Elçilerimiz</h1>
+            <h1 className="mb-4">Elçilerimiz</h1>
             <p className="opacity-90">
               Motorsportun en parlak zihinlerinin desteğinden gurur duyuyoruz.
               Elçi ağımız bilgi paylaşır, zaman ayırır ve programımızı dünya
               çapında güçlendirir.
             </p>
           </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-4 min-[380px]:grid-cols-2 md:grid-cols-4 sm:gap-6">
             {ambassadors.map((name, i) => (
               <FadeIn
                 key={name}
                 delay={i * 0.04}
-                className="border border-white/15 p-6 min-h-[160px] flex items-end"
+                className="border border-white/15 p-4 sm:p-6 min-h-[140px] sm:min-h-[160px] flex items-end"
               >
                 <h4 className="text-xl">{name}</h4>
               </FadeIn>
