@@ -1,9 +1,7 @@
 import { Hero } from "@/components/ui/Hero";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
+import { SplitContent } from "@/components/ui/SplitContent";
 import { JoinTheRace } from "@/components/sections/JoinTheRace";
-import { FadeIn } from "@/components/ui/FadeIn";
-import { Button } from "@/components/ui/Button";
-import { Container, Section } from "@/components/ui/Section";
 import { buildMetadata } from "@/lib/seo";
 import { images } from "@/data/images";
 
@@ -19,6 +17,7 @@ const classes = [
     subtitle: "Mükemmel başlangıç",
     description:
       "Entry Class, STEM Racing’e yeni başlayan öğrenciler için ideal giriş noktasıdır. Yarışmanın temel unsurlarını tanıtır: Tasarım, Analiz, Test, Üretim, Yarış.",
+    image: images.secondary1,
   },
   {
     theme: "white-bold" as const,
@@ -26,6 +25,7 @@ const classes = [
     subtitle: "Bir üst vites",
     description:
       "Development Class, öğrencileri teknik yeniliğe daha fazla iter; aerodinamik ve performans anlayışını sınamak için kanat tasarımını ekler.",
+    image: images.secondary2,
   },
   {
     theme: "light-bold" as const,
@@ -33,6 +33,7 @@ const classes = [
     subtitle: "Yenilik ile hırsın buluştuğu yer",
     description:
       "Secondary bölümünün en ileri aşaması olan Professional Class, ayrıntılı teknik regülasyonlar çerçevesinde neredeyse tam tasarım özgürlüğü sunar.",
+    image: images.secondary3,
   },
 ];
 
@@ -44,7 +45,7 @@ export default function SecondaryPage() {
         description="STEM Racing Secondary, 11–19 yaşındaki öğrencileri daha büyük düşünmeye, daha akıllı çalışmaya ve fikirlerini daha ileri taşımaya davet eder — gerçek dünya STEM kariyerleri ve küresel tanınırlık için hazırlar."
         theme="black"
         image={images.secondary1}
-        imageAlt="STEM Racing"
+        imageAlt="STEM Racing Secondary"
       />
       <FeatureGrid
         theme="black-bold"
@@ -66,40 +67,17 @@ export default function SecondaryPage() {
           },
         ]}
       />
-      {classes.map((item) => (
-        <Section key={item.title} theme={item.theme} className="py-16 md:py-24">
-          <Container>
-            <FadeIn className="max-w-3xl mb-10">
-              <h2 className="mb-3">{item.title}</h2>
-              <p className="font-meta text-lg mb-4 opacity-80">{item.subtitle}</p>
-              <p className="opacity-90 mb-8">{item.description}</p>
-            </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-              {[
-                {
-                  t: "Neler içeriyor?",
-                  d: "İş birliği içinde bir ekip olarak tasarlayın, analiz edin, üretin, markalaştırın ve yarışın.",
-                },
-                {
-                  t: "Ekipman ve yazılım",
-                  d: "Autodesk ve Ansys’in ücretsiz endüstri araçlarına erişin; yarışma donanımı yollarını keşfedin.",
-                },
-                {
-                  t: "Yarışma seviyeleri",
-                  d: "Bölgeselden ulusala etkinlikler; en iyi ekipler için Dünya Finalleri elemesi.",
-                },
-              ].map((block, i) => (
-                <FadeIn key={block.t} delay={i * 0.05}>
-                  <h4 className="mb-3">{block.t}</h4>
-                  <p className="opacity-90">{block.d}</p>
-                </FadeIn>
-              ))}
-            </div>
-            <FadeIn>
-              <Button href="/contact">Hemen başlayın</Button>
-            </FadeIn>
-          </Container>
-        </Section>
+      {classes.map((item, index) => (
+        <SplitContent
+          key={item.title}
+          title={item.title}
+          description={`${item.subtitle}. ${item.description}`}
+          image={item.image}
+          imageAlt={item.title}
+          theme={item.theme}
+          reverse={index % 2 === 1}
+          cta={{ label: "Hemen başlayın", href: "/contact" }}
+        />
       ))}
       <JoinTheRace />
     </>

@@ -4,6 +4,7 @@ import { Container, Section } from "@/components/ui/Section";
 import { ContactForm } from "@/components/forms/Forms";
 import { siteConfig } from "@/lib/nav";
 import { buildMetadata } from "@/lib/seo";
+import { images } from "@/data/images";
 
 export const metadata = buildMetadata({
   title: "İletişim | Bugün bize ulaşın",
@@ -13,14 +14,19 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
-      <Hero title="İletişim" theme="black-bold" />
+      <Hero
+        title="İletişim"
+        theme="black-bold"
+        image={images.findus}
+        imageAlt="STEM Racing iletişim"
+      />
 
       <Section theme="bright" className="overflow-hidden py-4">
         <div className="flex overflow-hidden">
           <div className="eyebrow flex w-max max-w-none whitespace-nowrap py-3 motion-safe:animate-[marquee_18s_linear_infinite] motion-reduce:mx-auto motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:whitespace-normal">
             {Array.from({ length: 8 }).map((_, i) => (
               <span key={i} className="mx-6">
-                2026 İÇİN HEMEN KAYIT OLUN
+                2026-2027 SEZONU İÇİN KAYIT OLUN
               </span>
             ))}
           </div>

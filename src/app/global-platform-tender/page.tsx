@@ -3,6 +3,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Container, Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
+import { images } from "@/data/images";
 
 export const metadata = buildMetadata({
   title: "Küresel Platform İhalesi",
@@ -16,6 +17,8 @@ export default function GlobalPlatformTenderPage() {
         title="Küresel Platform İhalesi"
         description="STEM Racing’in küresel platformu ve sunum altyapısı konusunda iş birliği yapmak isteyen kurumlar için bilgiler."
         theme="black"
+        image={images.partnersHero}
+        imageAlt="Küresel platform ihalesi"
       />
       <Section theme="light-bold" className="py-16 md:py-24">
         <Container className="max-w-3xl">

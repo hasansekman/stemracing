@@ -7,6 +7,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { Container, Section } from "@/components/ui/Section";
 import { buildMetadata } from "@/lib/seo";
+import { images } from "@/data/images";
 
 export const metadata = buildMetadata({
   title: "Fusion Fundamentals | Öğretmenler",
@@ -39,6 +40,8 @@ export default function FusionFundamentalsPage() {
         title="Fusion Fundamentals"
         description="Autodesk ile ortaklaşa eğitimcilere ücretsiz mesleki gelişim kursları sunuyoruz — CAD ve CAM ile STEM öğrenmesini hayata geçiren uygulamalı oturumlar."
         theme="black"
+        image={images.autodeskTile}
+        imageAlt="Autodesk Fusion Fundamentals"
       />
       <FeatureGrid
         title="Neden Fusion Fundamentals’a kaydolmalısınız?"

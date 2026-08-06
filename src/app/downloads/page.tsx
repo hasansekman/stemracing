@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { Container, Section } from "@/components/ui/Section";
 import { buildMetadata } from "@/lib/seo";
+import { images } from "@/data/images";
 
 export const metadata = buildMetadata({
   title: "İndirmeler | STEM Racing deneyiminizi güçlendirin",
@@ -63,6 +64,8 @@ export default function DownloadsPage() {
         title="İndirmeler"
         description="Yarışmanın kural ve regülasyonlarına tam uyum için temel STEM Racing grafiklerini ve araçlarını indirin."
         theme="black"
+        image={images.resources2}
+        imageAlt="STEM Racing indirmeler"
       />
       <Section theme="light-bold" className="py-16 md:py-24">
         <Container>

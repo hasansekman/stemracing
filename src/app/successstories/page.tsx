@@ -3,6 +3,7 @@ import { BlogGrid } from "@/components/sections/BlogGrid";
 import { JoinTheRace } from "@/components/sections/JoinTheRace";
 import { successStories } from "@/data/blog";
 import { buildMetadata } from "@/lib/seo";
+import { images } from "@/data/images";
 
 export const metadata = buildMetadata({
   title: "Başarı Hikâyeleri",
@@ -17,7 +18,9 @@ export default function SuccessStoriesPage() {
       <Hero
         title="Başarı hikâyelerimiz"
         description="Öğrencilerin hayallerindeki kariyerleri görmesini sağlayan ve bu rollere giden yolda onları hızlandıran STEM Racing, öğrenci gelişiminin katalizörüdür."
-        theme="bright"
+        theme="black"
+        image={images.ukSuccessLewisFowler}
+        imageAlt="STEM Racing başarı hikâyeleri"
       />
       <BlogGrid posts={successStories} basePath="/successstories" />
       <JoinTheRace />

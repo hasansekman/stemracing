@@ -17,6 +17,8 @@ export default function Page() {
         title="Autodesk"
         description="Autodesk Fusion, öğrenci ve öğretmenlere tasarım ve üretim için bulut tabanlı bir CAD/CAM platformu sunar."
         theme="black"
+        image={images.autodeskTile}
+        imageAlt="Autodesk"
       />
       <FeatureGrid
         title="Autodesk Fusion nedir?"

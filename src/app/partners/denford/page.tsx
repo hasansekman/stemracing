@@ -16,6 +16,8 @@ export default function DenfordPage() {
         title="Denford"
         description="Eğitim üretim teknolojilerinde köklü bir mirasa sahip STEM Racing kurucu partneri."
         theme="black"
+        image={images.denfordTile}
+        imageAlt="Denford"
       />
       <SplitContent
         title="Köklü bir miras"

@@ -62,4 +62,34 @@ export const images = {
   findus: "https://images.squarespace-cdn.com/content/v1/68b858da4556365ec586dae9/4be6b326-5c6b-417a-b754-50b1eeb90dd0/Stem-RE3_2426+%282%29.jpg?format=1500w",
   resources1: "https://images.squarespace-cdn.com/content/v1/68b858da4556365ec586dae9/f9fc5883-cb3a-4a07-a3cd-0a291a24b74d/1-DG5_2152.jpg?format=1500w",
   resources2: "https://images.squarespace-cdn.com/content/v1/68b858da4556365ec586dae9/b1e14d30-5770-487e-bd1e-c2285038de68/44d48c0f-9fcb-47de-930e-de0d8c7f07ef+%281%29.JPG?format=1500w",
+
+  // stemracing.co.uk About + shared banners
+  ukAboutHero:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/733353fc-1b78-43ce-ae69-6186a43a6450/STEM+UK+Web+banners-05.jpg?format=1500w",
+  ukAboutCompetition:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/358c4721-1f27-4b33-b4d7-238f31cb72d2/1-7B1A7051.jpg?format=1500w",
+  ukAboutImpactA:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/2c909240-08ff-4b07-8915-3e4b2b570d39/54929818510_09ac1dcafc_k.jpg?format=1500w",
+  ukAboutImpactB:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/6efcb307-36d0-4381-ae04-3d49e51c8fbf/UK-RE2_1515.jpg?format=1500w",
+  ukAboutMockups:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/f6b26931-c330-452f-a7b6-e6107798af71/STEM+web+mock+ups.jpg?format=1500w",
+  ukBannerCta:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/e14ea013-baf1-476f-8a1f-f86d8ea8a105/STEM+UK+Web+banners-04.jpg?format=1500w",
+  ambassadorJamesAllen:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/1762852976190-BWU4U1HE4XNJAOK14UY1/motorsport-network-media-james-allen-president-f1-business.jpg?format=1500w",
+  ambassadorBernie:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/c2cdc3c3-97f9-48bf-a709-669db28f29cc/d11sin577+%283%29.jpg?format=1500w",
+  ambassadorPaulMonaghan:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/7e0bad46-b4d2-4d26-968b-b46c9812e9e0/54838401140_ea7b092097_c+%283%29.jpg?format=1500w",
+  ambassadorClaireWilliams:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/cf557c02-162f-4a72-8ecf-8073a0fb41e6/Formula+1+header+templates+-+2025-03-06T122645.259+%282%29+%281%29.jpeg?format=1500w",
+  ukSuccessGeorgePoulter:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/1762852978465-WQGI5F2E2HSRMBCW7XCH/53589004071_9db5b0ddc5_k+%281%29.jpg?format=1500w",
+  ukSuccessLewisFowler:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/1762852978322-7I7U4J4UGGZ2R5VXXK5T/1-DG5_1280+%281%29.jpg?format=1500w",
+  ukSuccessGeorgeStonor:
+    "https://images.squarespace-cdn.com/content/v1/6913005a89f25e1a2f5bcef5/1762852978370-DQG85KNDOEA0HATQR6KX/_REG3930.jpg?format=1500w",
+  partnerLogosWhite:
+    "https://images.squarespace-cdn.com/content/v1/68b858da4556365ec586dae9/38dceaf4-60fa-4fc4-b8a7-4915934a6419/partner+logos+white+1+2.png?format=1500w",
 } as const;

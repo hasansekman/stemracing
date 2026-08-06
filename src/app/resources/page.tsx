@@ -25,9 +25,10 @@ export default function ResourcesPage() {
           {
             title: "Öğrenme kanalı",
             description:
-              "Yakında — STEM Racing öğrencileri için Maaden | Aston Martin öğrenme kanalı.",
+              "STEM Racing öğrencileri için Maaden | Aston Martin öğrenme kanalı — kaynaklar ve sektör içgörüsü.",
             href: "/unearth-your-greatness",
             ctaLabel: "İLGİ KAYDI OLUŞTUR",
+            image: images.ukAboutMockups,
           },
           {
             title: "Ekipman",
@@ -35,6 +36,7 @@ export default function ResourcesPage() {
               "Discovery, Primary ve Secondary için Denford kitleri ile üretim ekipmanlarına göz atın.",
             href: "https://denford.co.uk/products?type=f1-in-schools&page=1",
             ctaLabel: "EKİPMAN SATIN ALIN",
+            image: images.denfordTile,
           },
           {
             title: "İndirmeler",
@@ -42,6 +44,7 @@ export default function ResourcesPage() {
               "Yarışma ekipleri için çıkartmalar, ölçüm aparatları, üretim dosyaları ve uyumluluk grafikleri.",
             href: "/downloads",
             ctaLabel: "İndir",
+            image: images.resources2,
           },
           {
             title: "Autodesk Fusion",
@@ -49,6 +52,7 @@ export default function ResourcesPage() {
               "STEM Racing ekipleri için CAD/CAM yazılım erişimi ve öğretmen yolları.",
             href: "/partners/autodesk",
             ctaLabel: "AUTODESK FUSION",
+            image: images.autodeskTile,
           },
           {
             title: "Ansys Student",
@@ -56,6 +60,7 @@ export default function ResourcesPage() {
               "Ansys’ten CFD öğrenme kaynakları ve öğrenci takımı desteği.",
             href: "/partners/ansys",
             ctaLabel: "ANSYS STUDENT",
+            image: images.ansysTile,
           },
           {
             title: "Proje yönetimi",
@@ -63,6 +68,7 @@ export default function ResourcesPage() {
               "PMIEF ile hazırlanan 2026 Proje Yönetimi El Kitabı’nı indirin.",
             href: "/partners/pmief",
             ctaLabel: "PROJE YÖNETİMİ EL KİTABI",
+            image: images.pmiefTile,
           },
           {
             title: "Dünya Finalleri 2026 Regülasyonları",
@@ -70,6 +76,7 @@ export default function ResourcesPage() {
               "Aramco STEM Racing Dünya Finalleri 2026 teknik ve yarışma regülasyonları.",
             href: "/aramco-stem-racing-world-finals-2026",
             ctaLabel: "Teknik",
+            image: images.wfHero,
           },
           {
             title: "Yapay zekâ rehberi",
@@ -77,6 +84,7 @@ export default function ResourcesPage() {
               "STEM Racing proje çalışmalarında yapay zekâ araçlarının sorumlu kullanımı için rehberlik.",
             href: "/news",
             ctaLabel: "YZ rehberi",
+            image: images.news4,
           },
         ]}
       />

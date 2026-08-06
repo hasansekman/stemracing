@@ -19,20 +19,24 @@ export const metadata = buildMetadata({
 
 const ambassadors = [
   {
-    name: "Mühendislik Mentorları",
-    image: images.success2,
+    name: "James Allen",
+    role: "President, Autosport Business & F1 at Motorsport Network",
+    image: images.ambassadorJamesAllen,
   },
   {
-    name: "Sektör Elçileri",
-    image: images.success1,
+    name: "Bernie Ecclestone",
+    role: "F1 kurucusu ve eski yarışçı",
+    image: images.ambassadorBernie,
   },
   {
-    name: "Mezun Şampiyonlar",
-    image: images.wfChampions,
+    name: "Paul Monaghan",
+    role: "Chief Engineer, Oracle Red Bull Racing",
+    image: images.ambassadorPaulMonaghan,
   },
   {
-    name: "Eğitimci Liderler",
-    image: images.homeEducators,
+    name: "Claire Williams",
+    role: "Britanyalı motorsport yöneticisi",
+    image: images.ambassadorClaireWilliams,
   },
 ];
 
@@ -43,8 +47,9 @@ export default function AboutUsPage() {
         title="STEM Racing hakkında"
         description="Sınırları zorlayanlar, değişim yaratanlar ve geleceğin sektör liderleri için bir sınıf yarışması."
         theme="black"
-        image={images.aboutHero}
-        imageAlt="STEM Racing"
+        image={images.ukAboutHero}
+        imageAlt="STEM Racing öğrencileri"
+        imageClassName="object-cover object-center"
       />
       <FeatureGrid
         theme="black-bold"
@@ -66,35 +71,30 @@ export default function AboutUsPage() {
           },
         ]}
       />
-      <Section theme="light-bold" className="py-16 md:py-24">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <FadeIn>
-              <h2 className="mb-4">Yarışmamız</h2>
-              <p className="opacity-90 mb-6">
-                STEM Racing, öğrencileri kendi Formula 1® takımlarını kurmaya
-                davet eder. 3–6 kişilik gruplarda minyatür araçlarını tasarlar,
-                geliştirir ve yarıştırırken profesyonel bir projenin her
-                boyutunu yönetirler.
-              </p>
-              <Button href="/the-competition">Yarışmayı keşfedin</Button>
-            </FadeIn>
-            <FadeIn delay={0.05}>
-              <h2 className="mb-4">Etkimiz</h2>
-              <p className="opacity-90 mb-6">
-                Yirmi beş yılı aşkın süredir STEM Racing, binlerce gencin
-                yenilik tutkusunu ateşledi — motorsport ve mühendisliğin
-                zirvesine uzanan kariyerler başlattı.
-              </p>
-              <Button href="/our-impact">Etkimizi keşfedin</Button>
-            </FadeIn>
-          </div>
-        </Container>
-      </Section>
+
+      <SplitContent
+        title="Yarışmamız"
+        description="STEM Racing, öğrencileri kendi Formula 1® takımlarını kurmaya davet eder. 3–6 kişilik gruplarda minyatür araçlarını tasarlar, geliştirir ve yarıştırırken profesyonel bir projenin her boyutunu yönetirler. Bölgesel etkinlikler ulusal finallere, en iyiler ise Aramco STEM Racing Dünya Finalleri’ne uzanır."
+        cta={{ label: "Yarışmayı keşfedin", href: "/the-competition" }}
+        image={images.ukAboutCompetition}
+        imageAlt="STEM Racing yarışma anı"
+        theme="light-bold"
+      />
+
+      <SplitContent
+        title="Etkimiz"
+        description="Yirmi beş yılı aşkın süredir STEM Racing, binlerce gencin yenilik tutkusunu ateşledi — motorsport ve mühendisliğin zirvesine uzanan kariyerler başlattı."
+        cta={{ label: "Etkimizi keşfedin", href: "/our-impact" }}
+        image={images.ukAboutImpactB}
+        imageAlt="STEM Racing etkinliğinde öğrenciler"
+        theme="white-bold"
+        reverse
+      />
+
       <Section theme="black-bold" className="py-16 md:py-24">
         <Container>
           <FadeIn className="mb-10 max-w-3xl">
-            <h1 className="mb-4">Elçilerimiz</h1>
+            <h2 className="mb-4">Elçilerimiz</h2>
             <p className="opacity-90">
               Motorsportun en parlak zihinlerinin desteğinden gurur duyuyoruz.
               Elçi ağımız bilgi paylaşır, zaman ayırır ve programımızı dünya
@@ -113,31 +113,78 @@ export default function AboutUsPage() {
                     src={ambassador.image}
                     alt={ambassador.name}
                     fill
-                    className="object-cover transition-transform duration-500 md:group-hover:scale-105"
+                    className="object-cover object-top transition-transform duration-500 md:group-hover:scale-105"
                     sizes="(max-width: 768px) 50vw, 25vw"
                     quality={75}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent" />
-                  <h4 className="absolute inset-x-0 bottom-0 p-4 text-xl sm:p-5">
-                    {ambassador.name}
-                  </h4>
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                    <h4 className="text-xl leading-tight">{ambassador.name}</h4>
+                    <p className="mt-1 text-sm opacity-80">{ambassador.role}</p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
           </div>
         </Container>
       </Section>
+
       <QuoteBand
-        quote="Yıllardır büyük bir heyecanla desteklediğim bir program. Her yıl standart yükseliyor gibi."
-        attribution="STEM Racing Elçisi"
+        quote="Yıllardır büyük bir heyecanla desteklediğim bir program. Her yıl standart yükseliyor gibi. Bu gençlerin ortaya koyduğu mühendislik yeniliği gerçekten ilham verici."
+        attribution="James Allen"
       />
+
       <SplitContent
         title="Başarı hikâyeleri"
         description="STEM Racing sayısız kariyer başlattı; motorsport ve mühendisliğin zirvesine uzanan yolculuklara yakıt oldu."
         cta={{ label: "Başarı hikâyelerini okuyun", href: "/successstories" }}
-        image={images.aboutSplit}
+        image={images.ukSuccessGeorgePoulter}
+        imageAlt="STEM Racing mezunu başarı hikâyesi"
         theme="light-bold"
       />
+
+      <Section theme="white-bold" className="py-16 md:py-24">
+        <Container>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {[
+              {
+                image: images.ukSuccessGeorgePoulter,
+                title: "George Poulter",
+                text: "Mercedes-AMG PETRONAS F1 Team — Mechanical Structural Analysis Engineer",
+              },
+              {
+                image: images.ukSuccessLewisFowler,
+                title: "Lewis Fowler",
+                text: "Aston Martin Aramco Formula One™ Team — Graduate Design Engineer, Aerodynamics",
+              },
+              {
+                image: images.ukSuccessGeorgeStonor,
+                title: "George Stonor",
+                text: "Red Bull Powertrains — Mechanical Structural Analysis Engineer",
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.05}>
+                <div className="media-frame relative mb-4 aspect-[3/2] w-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={75}
+                  />
+                </div>
+                <h4 className="mb-2">{item.title}</h4>
+                <p className="opacity-90">{item.text}</p>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn className="mt-10">
+            <Button href="/successstories">Tüm başarı hikâyeleri</Button>
+          </FadeIn>
+        </Container>
+      </Section>
+
       <JoinTheRace />
     </>
   );

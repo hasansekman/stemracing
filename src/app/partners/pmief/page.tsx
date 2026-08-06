@@ -16,6 +16,8 @@ export default function PmiefPage() {
         title="PMIEF"
         description="Hayat boyu proje yönetimi becerileri — STEM Racing ekiplerinin profesyoneller gibi planlamasına, liderlik etmesine ve teslim etmesine yardımcı olur."
         theme="black"
+        image={images.pmiefTile}
+        imageAlt="PMIEF"
       />
       <SplitContent
         title="Hayat boyu beceriler"

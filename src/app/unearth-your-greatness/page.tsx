@@ -3,6 +3,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Container, Section } from "@/components/ui/Section";
 import { InterestForm } from "@/components/forms/Forms";
 import { buildMetadata } from "@/lib/seo";
+import { images } from "@/data/images";
 
 export const metadata = buildMetadata({
   title: "Potansiyelinizi Ortaya Çıkarın",
@@ -18,6 +19,8 @@ export default function UnearthPage() {
         title="Potansiyelinizi ortaya çıkarın"
         description="Yakında: STEM Racing öğrencileri için Maaden | Aston Martin öğrenme kanalı — kaynaklar, rehberler ve sektör içgörüsü tek dijital destinasyonda."
         theme="black"
+        image={images.ukAboutMockups}
+        imageAlt="STEM Racing öğrenme kanalı"
       />
       <Section theme="light-bold" className="py-16 md:py-24">
         <Container className="max-w-2xl">

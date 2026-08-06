@@ -17,6 +17,8 @@ export default function Page() {
         title="Ansys"
         description="Öğrenciler Ansys araçlarıyla hava akışını analiz eder, tasarımlarını geliştirir ve gerçek CFD becerileri kazanır."
         theme="black"
+        image={images.ansysTile}
+        imageAlt="Ansys"
       />
       <FeatureGrid
         title="Neden Ansys?"
