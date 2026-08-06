@@ -61,18 +61,21 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-sm opacity-70 md:flex-row md:items-center md:gap-6">
-          <Link href="/privacy-policy" className="hover:opacity-100">
-            Gizlilik Politikası
-          </Link>
-          <span className="hidden md:inline">|</span>
-          <Link href="/cookie-policy" className="hover:opacity-100">
-            Çerez Politikası
-          </Link>
-          <span className="hidden md:inline">|</span>
-          <Link href="/global-platform-tender" className="hover:opacity-100">
-            Küresel Platform İhalesi
-          </Link>
+        <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-sm opacity-70 md:flex-row md:items-center md:justify-between md:gap-6">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+            <Link href="/privacy-policy" className="hover:opacity-100">
+              Gizlilik Politikası
+            </Link>
+            <span className="hidden md:inline">|</span>
+            <Link href="/cookie-policy" className="hover:opacity-100">
+              Çerez Politikası
+            </Link>
+            <span className="hidden md:inline">|</span>
+            <Link href="/global-platform-tender" className="hover:opacity-100">
+              Küresel Platform İhalesi
+            </Link>
+          </div>
+          <p className="opacity-80">© {new Date().getFullYear()} {siteConfig.name}</p>
         </div>
       </Container>
     </Section>

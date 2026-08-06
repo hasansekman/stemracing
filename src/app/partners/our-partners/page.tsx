@@ -1,5 +1,6 @@
 import { Hero } from "@/components/ui/Hero";
 import { CardGrid } from "@/components/sections/CardGrid";
+import { JoinTheRace } from "@/components/sections/JoinTheRace";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { Container, Section } from "@/components/ui/Section";
@@ -41,32 +42,37 @@ export default function PartnersPage() {
           {
             title: "Ansys",
             image: images.ansysTile,
-            description: "Öğrencilerin aerodinamik performansı analiz edip geliştirmesine yardımcı olan lider CFD araçları.",
+            description:
+              "Öğrencilerin aerodinamik performansı analiz edip geliştirmesine yardımcı olan lider CFD araçları.",
             href: "/partners/ansys",
           },
           {
             title: "Autodesk",
             image: images.autodeskTile,
-            description: "Tasarım, üretim ve öğretmen CPD’si için Autodesk Fusion’a ücretsiz eğitim erişimi.",
+            description:
+              "Tasarım, üretim ve öğretmen CPD’si için Autodesk Fusion’a ücretsiz eğitim erişimi.",
             href: "/partners/autodesk",
           },
           {
             title: "Denford",
             image: images.denfordTile,
-            description: "Ekipman, üretim yolları ve sınıf kitleri sağlayan kurucu partner.",
+            description:
+              "Ekipman, üretim yolları ve sınıf kitleri sağlayan kurucu partner.",
             href: "/partners/denford",
           },
           {
             title: "Formula 1",
             image: images.f1Tile,
-            description: "Sınıfları dünyanın en heyecan verici motorsportuyla buluşturan resmi destek.",
+            description:
+              "Sınıfları dünyanın en heyecan verici motorsportuyla buluşturan resmi destek.",
             href: "https://corp.formula1.com/",
             ctaLabel: "Daha fazla bilgi",
           },
           {
             title: "PMIEF",
             image: images.pmiefTile,
-            description: "Hayat boyu beceriler kazandıran proje yönetimi eğitim kaynakları.",
+            description:
+              "Hayat boyu beceriler kazandıran proje yönetimi eğitim kaynakları.",
             href: "/partners/pmief",
           },
         ]}
@@ -74,9 +80,12 @@ export default function PartnersPage() {
       <Section theme="bright" className="py-16 md:py-20">
         <Container>
           <FadeIn className="max-w-3xl">
-            <h2 className="mb-4">Gelecek nesle ilham vermek için bize katılmaya hazır mısınız?</h2>
-            <p className="opacity-90 mb-8">
-              Misyonumuzu paylaşan kurumlarla yeni iş birliklerine her zaman açığız.
+            <h2 className="mb-4">
+              Gelecek nesle ilham vermek için bize katılmaya hazır mısınız?
+            </h2>
+            <p className="mb-8 opacity-90">
+              Misyonumuzu paylaşan kurumlarla yeni iş birliklerine her zaman
+              açığız.
             </p>
             <Button href="/contact" variant="secondary">
               Partner olun
@@ -84,6 +93,7 @@ export default function PartnersPage() {
           </FadeIn>
         </Container>
       </Section>
+      <JoinTheRace />
     </>
   );
 }

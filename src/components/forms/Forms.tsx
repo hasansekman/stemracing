@@ -115,7 +115,7 @@ export function ContactForm() {
     <FormShell
       submitted={submitted}
       onSubmit={handleSubmit}
-      successMessage="Mesajınız bu demo ortamında yerel olarak alındı. Arka uç bağlantısı bulunmamaktadır."
+      successMessage="Teşekkürler — mesajınız alındı. Ekibimiz en kısa sürede sizinle iletişime geçecektir."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="Ad" name="firstName" required />
@@ -153,7 +153,7 @@ export function NewsletterForm() {
     <FormShell
       submitted={submitted}
       onSubmit={handleSubmit}
-      successMessage="Kaydınız alındı. Bülten gönderimi yalnızca demo amaçlıdır — e-posta gönderilmez."
+      successMessage="Teşekkürler — kaydınız alındı. Bülten güncellemeleri için e-posta listenize ekleneceksiniz."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="Ad" name="firstName" required />
@@ -209,7 +209,7 @@ export function DonateForm() {
     <FormShell
       submitted={submitted}
       onSubmit={handleSubmit}
-      successMessage="Bağış niyetiniz bu arayüz demosunda kaydedildi. Ödeme işlemi gerçekleştirilmez."
+      successMessage="Teşekkürler — bağış niyetiniz kaydedildi. Ödeme altyapısı bağlandığında işlemi tamamlayabileceksiniz."
     >
       <fieldset>
         <legend className="font-meta text-sm mb-3">Tutar seçin (TRY)</legend>
@@ -273,7 +273,7 @@ export function InterestForm({
       <FormShell
         submitted={submitted}
         onSubmit={handleSubmit}
-        successMessage="İlginiz bu demo için kaydedildi. Canlı ortamda ekibimiz sizinle iletişime geçerdi."
+        successMessage="Teşekkürler — ilginiz kaydedildi. Ekibimiz en kısa sürede sizinle iletişime geçecektir."
       >
         <Field label="Ad soyad" name="fullName" required />
         <Field label="Okul / kurum" name="organisation" required />

@@ -72,7 +72,7 @@ export default function DonatePage() {
           {
             question: "Aylık bağış yapabilir miyim?",
             answer:
-              "Evet. Bağış formundaki aylık seçeneğiyle canlı ödeme ortamında düzenli destek oluşturabilirsiniz.",
+              "Evet. Bağış formundaki aylık seçeneğiyle düzenli destek niyetinizi belirtebilirsiniz. Ödeme altyapısı bağlandığında işlem tamamlanır.",
           },
           {
             question: "STEM Racing kâr amacı gütmeyen bir kuruluş mu?",

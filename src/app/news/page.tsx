@@ -1,5 +1,6 @@
 import { Hero } from "@/components/ui/Hero";
 import { BlogGrid } from "@/components/sections/BlogGrid";
+import { JoinTheRace } from "@/components/sections/JoinTheRace";
 import { newsPosts } from "@/data/blog";
 import { buildMetadata } from "@/lib/seo";
 import { images } from "@/data/images";
@@ -21,6 +22,7 @@ export default function NewsPage() {
         imageAlt="STEM Racing haberleri"
       />
       <BlogGrid posts={newsPosts} basePath="/news" />
+      <JoinTheRace />
     </>
   );
 }

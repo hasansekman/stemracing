@@ -17,7 +17,7 @@ export default function UnearthPage() {
     <>
       <Hero
         title="Potansiyelinizi ortaya çıkarın"
-        description="Yakında: STEM Racing öğrencileri için Maaden | Aston Martin öğrenme kanalı — kaynaklar, rehberler ve sektör içgörüsü tek dijital destinasyonda."
+        description="STEM Racing öğrencileri için Maaden | Aston Martin öğrenme kanalına ilginizi kaydedin — kaynaklar, rehberler ve sektör içgörüsü tek dijital destinasyonda."
         theme="black"
         image={images.ukAboutMockups}
         imageAlt="STEM Racing öğrenme kanalı"

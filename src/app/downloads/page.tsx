@@ -11,15 +11,45 @@ export const metadata = buildMetadata({
   path: "/downloads",
 });
 
-const groups = [
+const UK = "https://www.stemracing.co.uk/s";
+
+type DownloadAction = { label: string; href: string };
+
+type DownloadItem = {
+  name: string;
+  actions: DownloadAction[];
+};
+
+const groups: { title: string; items: DownloadItem[] }[] = [
   {
     title: "Primary ve Secondary kaynakları",
     items: [
-      { name: "STEM Racing çıkartması (beyaz)", actions: ["BEYAZ"] },
-      { name: "STEM Racing çıkartması (siyah)", actions: ["SİYAH"] },
       {
-        name: "Kask 3D tasarım dosyaları",
-        actions: ["İndir (Zip)", "İndir (STL)"],
+        name: "STEM Racing çıkartması (beyaz)",
+        actions: [
+          { label: "BEYAZ", href: `${UK}/decal_white.png` },
+          { label: "YEDEK", href: `${UK}/decal_white_spare.png` },
+        ],
+      },
+      {
+        name: "STEM Racing çıkartması (siyah)",
+        actions: [
+          { label: "SİYAH A", href: `${UK}/decal_black_a.png` },
+          { label: "SİYAH B", href: `${UK}/decal_black_b.png` },
+        ],
+      },
+      {
+        name: "Kask / Halo 3D tasarım dosyaları",
+        actions: [
+          {
+            label: "İndir (Zip)",
+            href: `${UK}/halo_2025_with_6mm_hole_and_sr_logo-1.zip`,
+          },
+          {
+            label: "Entry jig (STL)",
+            href: `${UK}/final_entry_class_halo_spigot_drilling_jig.stl`,
+          },
+        ],
       },
     ],
   },
@@ -27,31 +57,47 @@ const groups = [
     title: "Secondary kaynakları",
     items: [
       {
-        name: "Pro Class denetim aparatları Set 1",
-        actions: ["SET 1 (AI)", "SET 1 (DXF)"],
+        name: "Entry Class No-Go Zone",
+        actions: [
+          { label: "İndir (Zip)", href: `${UK}/Entry-Class-No-Go-Zone.zip` },
+        ],
       },
       {
-        name: "Pro Class denetim aparatları Set 2",
-        actions: ["SET 2 (AI) V2", "SET 2 (DXF) V2"],
+        name: "Development Class No-Go Zones",
+        actions: [
+          { label: "İndir (Zip)", href: `${UK}/Dev-Class-No-Go-Zones-er9j.zip` },
+        ],
       },
       {
-        name: "Pro Class denetim aparatları Set 3",
-        actions: ["SET 3 (AI)", "SET 3 (DXF)"],
+        name: "Development Halo Spigot Drilling Jig",
+        actions: [
+          {
+            label: "İndir (STL)",
+            href: `${UK}/Development-Halo-Spigot-Drilling-Jig-for-3D-Printing-V2.stl`,
+          },
+        ],
       },
       {
-        name: "Halo üretim dosyaları",
-        actions: ["İndir (STL)", "İndir (Zip)"],
+        name: "Denetim aparatları (Entry / Dev / Pro)",
+        actions: [
+          { label: "ENTRY", href: `${UK}/Entry-Guages.zip` },
+          { label: "DEV", href: `${UK}/Dev-Guages.zip` },
+          { label: "PRO", href: `${UK}/Pro-Guages.zip` },
+        ],
       },
-      { name: "Model Block", actions: ["İndir"] },
     ],
   },
   {
-    title: "Primary kaynakları",
+    title: "Diğer kaynaklar",
     items: [
-      { name: "Formula 1® takım giydirmeleri", actions: ["İndir (Zip)"] },
       {
-        name: "Entry Class denetim aparatları",
-        actions: ["SET 1 (AI)", "SET 1 (DXF)"],
+        name: "Ek dosyalar ve güncel paketler",
+        actions: [
+          {
+            label: "Tüm kaynaklar",
+            href: "/resources",
+          },
+        ],
       },
     ],
   },
@@ -82,12 +128,13 @@ export default function DownloadsPage() {
                     <div className="flex flex-wrap gap-3">
                       {item.actions.map((action) => (
                         <Button
-                          key={action}
-                          href="/contact"
+                          key={action.label}
+                          href={action.href}
                           variant="secondary"
                           className="!py-3 !px-4 !text-sm"
+                          external={action.href.startsWith("http")}
                         >
-                          {action}
+                          {action.label}
                         </Button>
                       ))}
                     </div>

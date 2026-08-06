@@ -15,18 +15,20 @@ export default function CookiePolicyPage() {
       <Section theme="light-bold" className="py-16 md:py-24">
         <Container className="max-w-3xl space-y-8">
           <FadeIn>
-            <h2 className="text-3xl mb-3">Çerezler nasıl kullanılır?</h2>
-            <p className="opacity-90 leading-relaxed">
-              Bu yeniden oluşturmada, gerektiğinde site işlevselliği için temel
-              çerezler kullanılabilir. Analitik veya pazarlama çerezleri yalnızca
-              üretim ortamında onayınızla etkinleştirilir.
+            <h2 className="mb-3 text-3xl">Çerezler nasıl kullanılır?</h2>
+            <p className="leading-relaxed opacity-90">
+              Bu sitede temel işlevsellik için gerekli çerezler kullanılabilir
+              (oturum, güvenlik ve tercih hatırlama). Analitik veya pazarlama
+              çerezleri yalnızca açık onayınızla etkinleştirilir.
             </p>
           </FadeIn>
           <FadeIn delay={0.05}>
-            <h2 className="text-3xl mb-3">Tercihlerinizi yönetmek</h2>
-            <p className="opacity-90 leading-relaxed">
-              Çerezleri tarayıcı ayarlarınız üzerinden kontrol edebilirsiniz. Bazı
-              çerezleri engellemek belirli site özelliklerini etkileyebilir.
+            <h2 className="mb-3 text-3xl">Tercihlerinizi yönetmek</h2>
+            <p className="leading-relaxed opacity-90">
+              Çerezleri tarayıcı ayarlarınız üzerinden kontrol edebilir veya
+              silebilirsiniz. Bazı çerezleri engellemek belirli site
+              özelliklerini etkileyebilir. Daha fazla bilgi için gizlilik
+              politikamıza bakın.
             </p>
           </FadeIn>
         </Container>

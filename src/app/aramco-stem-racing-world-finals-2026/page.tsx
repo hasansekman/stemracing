@@ -3,6 +3,9 @@ import { StatsRow } from "@/components/sections/StatsRow";
 import { SplitContent } from "@/components/ui/SplitContent";
 import { QuoteBand } from "@/components/sections/QuoteBand";
 import { JoinTheRace } from "@/components/sections/JoinTheRace";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { VideoEmbed } from "@/components/ui/VideoEmbed";
+import { Container, Section } from "@/components/ui/Section";
 import { buildMetadata } from "@/lib/seo";
 import { images } from "@/data/images";
 
@@ -36,6 +39,17 @@ export default function WorldFinals2026Page() {
           { value: "11", label: "destekleyen Formula 1® takımı" },
         ]}
       />
+      <Section theme="black-bold" className="py-16">
+        <Container>
+          <FadeIn>
+            <h2 className="mb-6">2025’ten öne çıkanlar</h2>
+            <VideoEmbed
+              title="Aramco STEM Racing Dünya Finalleri özet videosu"
+              youtubeId="OdR7ytBk2Gk"
+            />
+          </FadeIn>
+        </Container>
+      </Section>
       <SplitContent
         title="Dünyanın en iyileri"
         description="Ekim’de 13–19 yaş arası, dünyanın en parlak 500’den fazla genci; Formula 1 takvimiyle yan yana yarışmak için Singapur’a gelecek."

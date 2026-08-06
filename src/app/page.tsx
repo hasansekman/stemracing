@@ -74,7 +74,7 @@ export default function HomePage() {
               geliştirilmiş, mühendislerin güvencesinde.
             </p>
 
-            <p className="eyebrow mt-10 mb-6">Partnerlerimiz</p>
+            <p className="eyebrow mt-10 mb-6">Destekleyenler</p>
 
             <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-6 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-8">
               <div className="relative mx-auto h-12 w-full max-w-md sm:mx-0 sm:h-14">
