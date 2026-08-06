@@ -22,6 +22,10 @@ type HeroProps = {
   align?: "left" | "center";
   /** Sağ tarafta marka logosu göster (md ve üzeri) */
   showCornerLogo?: boolean;
+  /** UK-style gradient + cutout people */
+  variant?: "image" | "gradient";
+  cutoutSrc?: string;
+  cutoutAlt?: string;
   /** Hero LCP için animasyonu kapat (varsayılan: true) */
   animate?: boolean;
   className?: string;
@@ -43,9 +47,14 @@ export function Hero({
   descriptionClassName,
   align = "left",
   showCornerLogo = false,
+  variant = "image",
+  cutoutSrc,
+  cutoutAlt = "",
   animate = true,
   className,
 }: HeroProps) {
+  const isGradient = variant === "gradient";
+
   const content = (
     <>
       {eyebrow ? <p className="eyebrow mb-4 opacity-90">{eyebrow}</p> : null}
@@ -60,7 +69,18 @@ export function Hero({
           {description}
         </p>
       ) : null}
-      {cta ? <Button href={cta.href}>{cta.label}</Button> : null}
+      {cta ? (
+        <Button
+          href={cta.href}
+          className={
+            isGradient
+              ? "!border-white !bg-white !text-brand-black hover:!bg-transparent hover:!text-white"
+              : undefined
+          }
+        >
+          {cta.label}
+        </Button>
+      ) : null}
     </>
   );
 
@@ -71,15 +91,18 @@ export function Hero({
 
   return (
     <Section
-      theme={theme}
+      theme={isGradient ? "black" : theme}
       className={cn(
-        "relative flex items-end overflow-hidden",
+        "relative flex overflow-hidden",
+        isGradient ? "items-center" : "items-end",
         !className?.includes("pb-") && "pb-14 md:pb-24",
         !className?.includes("pt-") && "pt-10 md:pt-14",
+        isGradient &&
+          "bg-[linear-gradient(125deg,#0a0314_0%,#2a0833_38%,#7a0a5c_72%,#e6007e_100%)]",
         className,
       )}
     >
-      {image ? (
+      {!isGradient && image ? (
         <div className="absolute inset-0 overflow-hidden bg-brand-black">
           <Image
             src={image}
@@ -101,8 +124,24 @@ export function Hero({
         </div>
       ) : null}
 
+      {isGradient && cutoutSrc ? (
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-[1] hidden w-[52%] items-end justify-end md:flex lg:w-[48%]">
+          <div className="relative h-[92%] w-full max-w-[720px]">
+            <Image
+              src={cutoutSrc}
+              alt={cutoutAlt}
+              fill
+              priority
+              className="object-contain object-bottom object-right drop-shadow-2xl"
+              sizes="(max-width: 1024px) 50vw, 720px"
+              unoptimized
+            />
+          </div>
+        </div>
+      ) : null}
+
       {showCornerLogo ? (
-        <div className="pointer-events-none absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 md:block md:right-8 lg:right-10">
+        <div className="pointer-events-none absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 md:right-8 md:block lg:right-10">
           <BrandLogo
             linked={false}
             heightClassName="h-16 w-auto opacity-95 drop-shadow-lg lg:h-24"
@@ -117,6 +156,22 @@ export function Hero({
             : "container-site relative z-10 w-full",
         )}
       >
+        {isGradient && cutoutSrc ? (
+          <div className="mb-8 md:hidden">
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-md">
+              <Image
+                src={cutoutSrc}
+                alt={cutoutAlt}
+                fill
+                priority
+                className="object-contain object-bottom"
+                sizes="100vw"
+                unoptimized
+              />
+            </div>
+          </div>
+        ) : null}
+
         {animate ? (
           <FadeIn className={contentClasses}>{content}</FadeIn>
         ) : (

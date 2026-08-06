@@ -51,17 +51,15 @@ export default function HomePage() {
         }
         description="Engelleri kaldıran, yeteneği besleyen ve STEM, motorsport ile ötesinde geleceğin kariyerlerine ilham veren küresel bir eğitim girişimiyiz."
         cta={{ label: "HEMEN BAŞLAYIN", href: "/findus" }}
-        image="/images/hero-banner.png"
-        imageAlt="STEM Racing World Finals"
+        variant="gradient"
+        cutoutSrc="/images/uk-ref/uk-people.png"
+        cutoutAlt="STEM Racing öğrencileri"
         animate={false}
-        showCornerLogo
-        imageClassName="object-cover object-[72%_center] sm:object-right"
-        overlayClassName="absolute inset-0 bg-gradient-to-r from-brand-black from-0% via-brand-black/90 via-45% to-transparent to-75% md:via-40% md:to-62%"
         containerClassName="px-5 sm:px-8 md:px-10 lg:px-12"
         contentClassName="max-w-[min(100%,34rem)] md:max-w-[38rem] lg:max-w-[42rem]"
-        titleClassName="text-[clamp(2.25rem,1rem+6vw,5.75rem)] leading-[0.98]"
+        titleClassName="text-[clamp(2.5rem,1rem+7vw,5.75rem)] leading-[0.95]"
         descriptionClassName="max-w-[32rem] leading-relaxed"
-        className="min-h-[min(72svh,560px)] w-full sm:min-h-[min(70svh,640px)] md:aspect-[2560/1045] md:min-h-[360px] md:max-h-[min(85vh,900px)] pb-10 pt-8 sm:pb-12 md:pb-16 md:pt-10 lg:pb-20"
+        className="min-h-[min(78svh,640px)] w-full pb-12 pt-8 sm:min-h-[min(75svh,700px)] md:pb-16 md:pt-12 lg:pb-20"
       />
 
       <Section theme="light-bold" className="py-16 md:py-24">
@@ -78,61 +76,27 @@ export default function HomePage() {
 
             <p className="eyebrow mt-10 mb-6">Partnerlerimiz</p>
 
-            <div className="mx-auto grid max-w-4xl grid-cols-2 items-center gap-x-4 gap-y-6 sm:grid-cols-3 sm:gap-x-12 sm:gap-y-10">
-              {(
-                [
-                  {
-                    src: "/images/partners/autodesk.png",
-                    alt: "Autodesk",
-                    width: 411,
-                    height: 43,
-                  },
-                  {
-                    src: "/images/partners/denford.png",
-                    alt: "Denford",
-                    width: 411,
-                    height: 31,
-                  },
-                  {
-                    src: "/images/partners/pmief.png",
-                    alt: "PMIEF",
-                    width: 247,
-                    height: 67,
-                  },
-                  {
-                    src: "/images/partners/ansys.png",
-                    alt: "Ansys",
-                    width: 236,
-                    height: 74,
-                  },
-                  {
-                    src: "/images/partners/fia-women.png",
-                    alt: "FIA Women in Motorsport",
-                    width: 191,
-                    height: 68,
-                  },
-                  {
-                    src: "/images/partners/ucl.png",
-                    alt: "UCL Mechanical Engineering",
-                    width: 144,
-                    height: 82,
-                  },
-                ] as const
-              ).map((logo) => (
-                <div
-                  key={logo.alt}
-                  className="flex h-12 items-center justify-center"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={logo.width}
-                    height={logo.height}
-                    className="h-8 w-auto max-w-full object-contain sm:h-9 md:h-10"
-                    unoptimized
-                  />
-                </div>
-              ))}
+            <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-6 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-8">
+              <div className="relative mx-auto h-12 w-full max-w-md sm:mx-0 sm:h-14">
+                <Image
+                  src="/images/partners/logos-strip-1.png"
+                  alt="Autodesk, Denford ve PMIEF"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 90vw, 420px"
+                  unoptimized
+                />
+              </div>
+              <div className="relative mx-auto h-12 w-full max-w-sm sm:mx-0 sm:h-14">
+                <Image
+                  src="/images/partners/logos-strip-2.png"
+                  alt="Ansys ve diğer partnerler"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 80vw, 360px"
+                  unoptimized
+                />
+              </div>
             </div>
           </FadeIn>
         </Container>

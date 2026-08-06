@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { SplitContent } from "@/components/ui/SplitContent";
@@ -17,10 +18,22 @@ export const metadata = buildMetadata({
 });
 
 const ambassadors = [
-  "Mühendislik Mentorları",
-  "Sektör Elçileri",
-  "Mezun Şampiyonlar",
-  "Eğitimci Liderler",
+  {
+    name: "Mühendislik Mentorları",
+    image: images.success2,
+  },
+  {
+    name: "Sektör Elçileri",
+    image: images.success1,
+  },
+  {
+    name: "Mezun Şampiyonlar",
+    image: images.wfChampions,
+  },
+  {
+    name: "Eğitimci Liderler",
+    image: images.homeEducators,
+  },
 ];
 
 export default function AboutUsPage() {
@@ -89,13 +102,26 @@ export default function AboutUsPage() {
             </p>
           </FadeIn>
           <div className="grid grid-cols-1 gap-4 min-[380px]:grid-cols-2 md:grid-cols-4 sm:gap-6">
-            {ambassadors.map((name, i) => (
+            {ambassadors.map((ambassador, i) => (
               <FadeIn
-                key={name}
+                key={ambassador.name}
                 delay={i * 0.04}
-                className="border border-white/15 p-4 sm:p-6 min-h-[140px] sm:min-h-[160px] flex items-end"
+                className="group overflow-hidden border border-white/15"
               >
-                <h4 className="text-xl">{name}</h4>
+                <div className="media-frame relative aspect-[3/4] w-full">
+                  <Image
+                    src={ambassador.image}
+                    alt={ambassador.name}
+                    fill
+                    className="object-cover transition-transform duration-500 md:group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    quality={75}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent" />
+                  <h4 className="absolute inset-x-0 bottom-0 p-4 text-xl sm:p-5">
+                    {ambassador.name}
+                  </h4>
+                </div>
               </FadeIn>
             ))}
           </div>

@@ -26,7 +26,7 @@ function Field({
   className,
 }: FieldProps) {
   const base =
-    "w-full bg-white/5 border border-current/20 rounded-[5.6px] px-4 py-3 text-base outline-none focus:border-brand-accent transition-colors";
+    "w-full bg-white/5 border border-current/20 rounded-[10px] px-4 py-3 text-base outline-none focus:border-brand-accent transition-colors";
 
   return (
     <label className={cn("block", className)}>
@@ -81,7 +81,7 @@ function FormShell({
     return (
       <div
         role="status"
-        className="rounded-[5.6px] border border-current/20 bg-white/5 p-6"
+        className="rounded-[10px] border border-current/20 bg-white/5 p-6"
       >
         <p className="text-lg font-[family-name:var(--font-heading)] italic mb-2">
           Teşekkürler

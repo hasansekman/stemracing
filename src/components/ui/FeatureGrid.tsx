@@ -36,19 +36,21 @@ export function FeatureGrid({
   return (
     <Section theme={theme} className="py-16 md:py-24">
       <Container>
-        <FadeIn className="mb-12 max-w-3xl">
-          {eyebrow ? <p className="eyebrow mb-3">{eyebrow}</p> : null}
-          {title ? <h2 className="mb-4">{title}</h2> : null}
-          {description ? (
-            <p className="text-base md:text-lg opacity-90">{description}</p>
-          ) : null}
-        </FadeIn>
+        {eyebrow || title || description ? (
+          <FadeIn className="mb-12 max-w-3xl">
+            {eyebrow ? <p className="eyebrow mb-3">{eyebrow}</p> : null}
+            {title ? <h2 className="mb-4">{title}</h2> : null}
+            {description ? (
+              <p className="text-base md:text-lg opacity-90">{description}</p>
+            ) : null}
+          </FadeIn>
+        ) : null}
 
-        <div className={cnGrid(colClass)}>
+        <div className={`grid grid-cols-1 gap-10 ${colClass}`}>
           {features.map((feature, index) => (
             <FadeIn key={feature.title} delay={index * 0.05}>
               <h4 className="mb-3">{feature.title}</h4>
-              <p className="opacity-90 text-base leading-relaxed">
+              <p className="text-base leading-relaxed opacity-90">
                 {feature.description}
               </p>
             </FadeIn>
@@ -63,8 +65,4 @@ export function FeatureGrid({
       </Container>
     </Section>
   );
-}
-
-function cnGrid(cols: string) {
-  return `grid grid-cols-1 gap-10 ${cols}`;
 }

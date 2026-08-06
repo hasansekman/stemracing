@@ -79,6 +79,10 @@ const organizationJsonLd = {
   logo: `${siteConfig.url}/LOGO/brand-logo.png`,
   sameAs: [
     "https://www.instagram.com/STEMRacingHQ",
+    "https://www.youtube.com/@STEMRacing",
+    "https://www.facebook.com/STEMRacing",
+    "https://www.tiktok.com/@stemracing",
+    "https://x.com/STEMRacing",
   ],
   address: {
     "@type": "PostalAddress",

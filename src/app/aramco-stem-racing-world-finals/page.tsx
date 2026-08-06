@@ -3,6 +3,7 @@ import { StatsRow } from "@/components/sections/StatsRow";
 import { SplitContent } from "@/components/ui/SplitContent";
 import { JoinTheRace } from "@/components/sections/JoinTheRace";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { VideoEmbed } from "@/components/ui/VideoEmbed";
 import { Container, Section } from "@/components/ui/Section";
 import { buildMetadata } from "@/lib/seo";
 import { images } from "@/data/images";
@@ -41,9 +42,10 @@ export default function WorldFinals2025Page() {
         <Container>
           <FadeIn>
             <h2 className="mb-6">Öne çıkanları izleyin</h2>
-            <div className="aspect-video bg-brand-dark border border-white/10 flex items-center justify-center">
-              <p className="opacity-80">Etkinlik özet videosu yakında</p>
-            </div>
+            <VideoEmbed
+              title="Aramco STEM Racing Dünya Finalleri özet videosu"
+              youtubeId="OdR7ytBk2Gk"
+            />
           </FadeIn>
         </Container>
       </Section>

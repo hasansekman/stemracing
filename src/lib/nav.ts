@@ -90,6 +90,22 @@ export const socialLinks = [
     label: "Instagram",
     href: "https://www.instagram.com/STEMRacingHQ",
   },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@STEMRacing",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/STEMRacing",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@stemracing",
+  },
+  {
+    label: "X",
+    href: "https://x.com/STEMRacing",
+  },
 ] as const;
 
 export const siteConfig = {

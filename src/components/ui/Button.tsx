@@ -35,7 +35,7 @@ export function Button({
 }: ButtonProps) {
   const classes = cn(
     "inline-flex items-center justify-center max-w-full text-center",
-    "px-6 py-4 min-[480px]:px-[2.2rem] min-[480px]:py-[1.5rem] rounded-[5.6px]",
+    "px-6 py-3.5 min-[480px]:px-[1.15rem] min-[480px]:py-[0.9rem] rounded-[10px]",
     "font-[family-name:var(--font-heading)] italic font-medium uppercase tracking-[0.1em] text-sm min-[480px]:text-base leading-[1.2]",
     "transition-colors duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
     "disabled:opacity-50 disabled:pointer-events-none whitespace-normal",
